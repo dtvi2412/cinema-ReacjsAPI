@@ -1,0 +1,67 @@
+.signIn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+.signIn__text {
+    font-size: 30px !important;
+    font-weight: 800;
+
+    text-align: center;
+}
+
+.formLogin {
+    border: 1px solid gray;
+    border-radius: 10px;
+
+    padding: 20px 20px 30px 25px;
+    margin-top: 80px;
+    margin-bottom: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.logo__amazone {
+    margin-top: 20px;
+    width: 100%;
+    height: 60px;
+    object-fit: contain;
+}
+.signInName {
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+}
+.dangNhap {
+    background: #f0c14b;
+    border-color: #a88734 #9c7e31 #846a29;
+
+    outline: none;
+    border: none;
+
+    padding: 5px 50px;
+
+    text-align: center;
+    font-weight: 700;
+
+    transition: all 0.5s;
+}
+.dangNhap:hover {
+    font-weight: bold;
+    mask-image: linear-gradient(to bottom, rgba(1, 0, 1, 1), rgba(71, 64, 71, 0));
+}
+@media (max-width: 550px) {
+    .signIn__text {
+        margin-top: 20px;
+        font-size: 20px !important;
+        font-weight: 800;
+
+        text-align: center;
+    }
+    .dangNhap {
+        padding: 5px 20px;
+    }
+}

@@ -1,0 +1,14 @@
+.CumRap {
+    margin-top: 8px;
+    text-align: left;
+    font-weight: bold;
+    &__content {
+        border-radius: 5px;
+        padding: 1px 0;
+        padding-left: 15px;
+        background-color: rgba(0, 0, 0, 0.7);
+        &__diaChi {
+            color: #f8f8f8;
+        }
+    }
+}

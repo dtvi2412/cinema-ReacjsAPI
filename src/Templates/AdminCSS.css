@@ -1,0 +1,16 @@
+.box {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.box__content {
+  width: 50%;
+  height: 330px;
+  object-fit: contain;
+  margin-bottom: 150px;
+  background: pink;
+  border: 1px solid black;
+  box-shadow: 2px 2px gray;
+}

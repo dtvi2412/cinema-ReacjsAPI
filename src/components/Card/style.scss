@@ -1,0 +1,80 @@
+.detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    .card__img {
+        box-shadow: 2px 2px 4px 5px black;
+    }
+    .danhGia {
+        padding: 15px;
+        border-radius: 50%;
+        background-color: #f1b722;
+    }
+    img {
+        margin: 50px 50px 100px 40px;
+        border-radius: 10px;
+        width: 50%;
+        height: 50%;
+        z-index: 1000;
+        position: relative;
+    }
+    &__film {
+        z-index: 10;
+        margin: 40px 0 100px 40px;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+        &__name {
+            color: white;
+            font-size: 65px;
+        }
+        &__info {
+            color: white;
+            font-size: 15px;
+            margin-left: 15px;
+            letter-spacing: 2px;
+            line-height: 24px;
+            overflow: hidden;
+            &__more {
+                background-color: #e46466;
+                margin: 10px;
+                color: #ffffff;
+                padding: 10px 20px;
+                border: none;
+                outline-width: 0;
+                &:focus {
+                    outline-width: 0;
+                }
+                &:hover {
+                    cursor: pointer;
+                    background: rgb(2, 0, 36);
+                    background: linear-gradient(
+                        90deg,
+                        rgba(2, 0, 36, 1) 0%,
+                        rgba(86, 9, 121, 0.8662815467984069) 71%,
+                        rgba(0, 212, 255, 1) 100%
+                    );
+                }
+            }
+        }
+        &__trailer {
+            background-color: #3898ec;
+            margin: 10px;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            outline-width: 0;
+            &:focus {
+                outline-width: 0;
+            }
+            &:hover {
+                cursor: pointer;
+                background: rgb(2, 0, 36);
+                background: linear-gradient(
+                    90deg,
+                    rgba(2, 0, 36, 1) 0%,
+                    rgba(86, 9, 121, 0.8662815467984069) 71%,
+                    rgba(0, 212, 255, 1) 100%
+                );
+            }
+        }
+    }
+}

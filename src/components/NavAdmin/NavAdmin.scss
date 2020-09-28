@@ -1,0 +1,121 @@
+$color: #00ff00;
+.nav {
+  position: fixed;
+  a {
+    text-decoration: none;
+  }
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+
+  &__left {
+    background: #111;
+    height: 100vh;
+
+    // flex: 0.2;
+    display: flex;
+    // justify-content: center;
+    transition: all 0.4s;
+
+    &__nav {
+      & > a {
+        text-decoration: none;
+      }
+
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+
+      transition: width 200ms ease;
+
+      width: 5rem;
+      .logout {
+        color: red;
+
+        text-align: center;
+
+        padding: 0 10px;
+        margin-top: 5px;
+        border-radius: 10px;
+        // transform: translateY(-20px);
+        transition: 0.5s all;
+
+        animation: example 0.3s linear 0s 1 alternate;
+
+        text-decoration: none;
+        border: none;
+
+        display: none;
+      }
+      &__logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1rem;
+        text-align: center;
+        color: #fff;
+
+        margin-bottom: 1rem;
+        & > .MuiSvgIcon-root {
+          transform: rotate(0deg);
+          transition: transform 0.4s;
+          height: 50px;
+        }
+      }
+      &__item {
+        text-align: center;
+        filter: grayscale(100%) opacity(0.7);
+        width: 100%;
+        &:hover {
+          filter: grayscale(0%) opacity(1);
+          background: gray;
+        }
+        & > .MuiSvgIcon-root {
+          height: 90px;
+          color: #00ff00;
+        }
+        &__text {
+          color: #fff;
+          display: none;
+          margin-left: 15px;
+          font-weight: bold;
+          font-size: 16px;
+
+          text-align: center;
+        }
+      }
+      &__item:last-child {
+        margin-top: auto;
+      }
+      &:hover {
+        width: 13rem;
+        cursor: pointer;
+      }
+      &:hover &__item__text {
+        display: inline-block;
+      }
+      &:hover .logout {
+        display: inline-block;
+      }
+      &:hover &__logo > .MuiSvgIcon-root {
+        color: $color;
+        transform: rotate(-720deg);
+      }
+    }
+  }
+}
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+body::-webkit-scrollbar-thumb {
+  background: #6649b8;
+}
+@keyframes example {
+  from {
+    transform: translateY(-22px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}

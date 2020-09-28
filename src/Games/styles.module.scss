@@ -1,0 +1,54 @@
+@font-face {
+    font-family: "font-game";
+    src: url("./Font/MonsterGame-EjB9.ttf");
+}
+.backgroundGame {
+    font-family: font-game;
+
+    position: relative;
+    z-index: 1;
+    .xiNgau {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        .nutMe {
+            border: 2px solid goldenrod !important;
+            border-radius: 15px !important;
+            // font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+            //     sans-serif;
+            font-size: 35px;
+            background-image: linear-gradient(to right bottom, red, black);
+            &:focus {
+                background-image: linear-gradient(to right bottom, white, yellow);
+                color: black !important;
+            }
+            &:hover {
+                background-image: linear-gradient(to right bottom, white, yellow);
+                color: black;
+                color: black !important;
+            }
+        }
+        .fontW {
+            font-size: 50px;
+            color: white !important;
+        }
+        .fontWSBC {
+            font-size: 40px;
+        }
+        .fontWSBT {
+            font-size: 60px;
+        }
+        .fontXiNgau {
+            // font-size: 40px;
+            // border-radius: 50%;
+            // margin: 20px;
+            background: none;
+            outline: none;
+            border: none;
+        }
+        .fontWBC {
+            font-size: 85px;
+        }
+    }
+}

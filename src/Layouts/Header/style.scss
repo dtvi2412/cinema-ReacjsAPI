@@ -1,0 +1,43 @@
+.colMe > .navMe {
+    background: red !important;
+}
+.colMe {
+    background: red !important;
+}
+.bgNavGray {
+    background-color: #19102a;
+
+    color: white;
+    position: fixed;
+    padding: 15px 0;
+    z-index: 9999;
+    font-weight: bold;
+    font-size: 18px;
+
+    &__content {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+.bgNav {
+    background-color: black;
+
+    color: white;
+    position: fixed;
+    padding: 15px 0;
+    z-index: 9999;
+    font-weight: bold;
+    font-size: 18px;
+
+    &__content {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+@media only screen and (max-width: 650px) {
+    .bgNav {
+        font-size: 14px;
+    }
+}

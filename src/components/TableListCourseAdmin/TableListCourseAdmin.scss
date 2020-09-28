@@ -1,0 +1,102 @@
+.table {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+
+  font-size: 18px;
+  .table__button {
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    &:focus {
+      border: none;
+      outline: none;
+    }
+  }
+  .button__them {
+    background: #51e2f5;
+  }
+  .button__xoa {
+    background: #ffabb6;
+  }
+  .button__sua {
+    background: #a28089;
+  }
+}
+.button__loadMore {
+  background: #9df9ef;
+  border: none;
+  border-radius: 10px;
+
+  margin-top: 20px;
+  padding: 10px 20px;
+
+  font-weight: bold;
+  font-size: 22px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+
+  display: flex;
+  margin: 0 auto;
+
+  &:focus {
+    border: none;
+    outline: none;
+  }
+  &:hover {
+    filter: hue-rotate(200deg);
+  }
+}
+.search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 10px;
+  margin-bottom: 20px;
+
+  &__input {
+    &:hover {
+      cursor: pointer;
+    }
+    border: none;
+    border-bottom: 1px solid black;
+    &:focus {
+      outline: none;
+      border-bottom: 1px solid black;
+    }
+  }
+}
+.voice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  button {
+    border: none;
+    background: white;
+    text-align: center;
+    &:focus {
+      outline: none;
+
+      & > .MuiSvgIcon-root {
+        z-index: 1;
+        color: red;
+        font-size: 140px;
+        // position: absolute;
+        // top: 50%;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
+
+        animation: te 3s linear 0.1s alternate;
+      }
+    }
+  }
+}
+@keyframes te {
+  from {
+    filter: hue-rotate(0);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
