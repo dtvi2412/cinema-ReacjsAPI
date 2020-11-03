@@ -1,27 +1,27 @@
-import React, { Component } from "react";
-import CourseItems from "../../components/CourseItem";
-import Header from "../../Layouts/Header";
+import React, { Component } from 'react';
+import CourseItems from '../../components/CourseItem';
+import Header from '../../Layouts/Header';
 
-import { connect } from "react-redux";
+import { connect } from 'react-redux';
 
-import { fetchCourses } from "../../Redux/Action/course";
-import Cinema from "../../components/Cinema";
-import CumRap from "../../components/CumRap";
-import LichChieu from "../../components/LichChieu";
-import "../Home/style.scss";
-import CarouselHome from "../../components/Carousel";
-import { Redirect } from "react-router-dom";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import SearchIcon from "@material-ui/icons/Search";
-import GirdMe from "../../components/GirdMe";
+import { fetchCourses } from '../../Redux/Action/course';
+import Cinema from '../../components/Cinema';
+import CumRap from '../../components/CumRap';
+import LichChieu from '../../components/LichChieu';
+import '../Home/style.scss';
+import CarouselHome from '../../components/Carousel';
+import { Redirect } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import SearchIcon from '@material-ui/icons/Search';
+import GirdMe from '../../components/GirdMe';
 class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
       visiable: 8,
       redirect: true,
-      search: "",
+      search: '',
     };
     this.loadMore = this.loadMore.bind(this);
   }
@@ -58,14 +58,14 @@ class Home extends Component {
     });
     return (
       <div
-        className={` ${
-          this.props.bgChange ? "backgroundChange" : "background"
+        className={` pb-5 ${
+          this.props.bgChange ? 'backgroundChange' : 'background'
         }`}
       >
-        {" "}
+        {' '}
         <div className="">
           <div className="home__carousel ">
-            {" "}
+            {' '}
             <CarouselHome />
           </div>
 
@@ -100,7 +100,7 @@ class Home extends Component {
                 );
               })}
             <div className="col-md-12 text-center m-2 mb-5">
-              {" "}
+              {' '}
               {this.state.visiable < this.props.courseList.length && (
                 <button onClick={this.loadMore} className=" xemThem">
                   Xem thêm
@@ -110,11 +110,11 @@ class Home extends Component {
           </div>
           <div className="row pb-5">
             <div className="col-lg-2 col-md-2 col-sm-12">
-              {" "}
+              {' '}
               <Cinema />
             </div>
             <div className="col-lg-4 col-md-4 col-sm-12">
-              {" "}
+              {' '}
               <CumRap />
             </div>
             <div className="col-lg-6 col-md-6 col-sm-12">
@@ -122,7 +122,7 @@ class Home extends Component {
             </div>
           </div>
           <div className="pt-5">
-            {" "}
+            {' '}
             <GirdMe />
           </div>
         </div>

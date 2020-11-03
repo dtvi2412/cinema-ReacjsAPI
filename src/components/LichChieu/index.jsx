@@ -102,8 +102,8 @@ function LichChieu(props) {
                               .map((item3, index) => {
                                 return (
                                   <Link
-                                    to={`/dat-ve/${item3.maLichChieu}`}
-                                    // target="_blank"
+                                    to={`${props.user === null ? "/sign-in" : `/dat-ve/${item3.maLichChieu}`} `}
+                                    target={`_blank"}`}
                                     key={index}
                                     className="muaVe"
                                   >
@@ -153,6 +153,7 @@ const mapStateToProps = (state) => {
   return {
     lichChieuList: state.CinemaReducer.lichChieu,
     choose: state.CinemaReducer.chooseCinema,
+    user : state.UserReducer.credential
   };
 };
 const mapDispatchToProps = (dispatch) => {

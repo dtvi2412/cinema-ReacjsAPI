@@ -1,11 +1,11 @@
-import React, { Component } from "react";
-import { Formik, Form, Field, ErrorMessage } from "formik";
-import { signInUserSchema } from "../../Service/user";
-import { connect } from "react-redux";
-import { login, fetchInfo } from "../../Redux/Action/user";
-import { NavLink, Redirect, Link } from "react-router-dom";
-import "./signIn.css";
-import Axios from "axios";
+import React, { Component } from 'react';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { signInUserSchema } from '../../Service/user';
+import { connect } from 'react-redux';
+import { login, fetchInfo } from '../../Redux/Action/user';
+import { NavLink, Redirect, Link } from 'react-router-dom';
+import './signIn.css';
+import Axios from 'axios';
 
 // import history from "../../history";
 class SignInScreen extends Component {
@@ -17,27 +17,27 @@ class SignInScreen extends Component {
     return (
       <Formik
         initialValues={{
-          taiKhoan: "",
-          matKhau: "",
+          taiKhoan: '',
+          matKhau: '',
         }}
         onSubmit={(values, err) => {
           this.props.dispatch(login(values, this.props.history));
         }}
         validationSchema={signInUserSchema}
         render={({ handleChange }) => (
-          <>
-            {" "}
-            <Link to="/">
-              {" "}
+          <div className="dangKy">
+            {' '}
+            {/* <Link to="/">
+              {' '}
               <img
                 className="logo__amazone"
-                // src="https://pmcvariety.files.wordpress.com/2018/01/amazon-logo.jpg?w=1000"
+              
                 src="https://www.freepnglogos.com/uploads/netflix-logo-0.png"
               />
-            </Link>
+            </Link> */}
             <Form className="w-50 mx-auto formLogin">
               <div className="signIn">
-                {" "}
+                {' '}
                 <h1 className="signIn__text">Đăng nhập</h1>
               </div>
 
@@ -75,7 +75,7 @@ class SignInScreen extends Component {
               Đăng nhập
             </NavLink> */}
             </Form>
-          </>
+          </div>
         )}
       />
     );

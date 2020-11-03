@@ -1,13 +1,13 @@
-import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
-import Logo from "../../Asset/Images/netflix-logo-0.png";
-import classic from "./../Header/styles.module.scss";
-import { connect } from "react-redux";
-import { createAction } from "../../Redux/Action";
-import { LOG_OUT } from "../../Redux/Action/type";
-import SwapHorizontalCircleIcon from "@material-ui/icons/SwapHorizontalCircle";
-import AdjustIcon from "@material-ui/icons/Adjust";
-import "./style.scss";
+import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
+import Logo from '../../Asset/Images/netflix-logo-0.png';
+import classic from './../Header/styles.module.scss';
+import { connect } from 'react-redux';
+import { createAction } from '../../Redux/Action';
+import { LOG_OUT } from '../../Redux/Action/type';
+import SwapHorizontalCircleIcon from '@material-ui/icons/SwapHorizontalCircle';
+import AdjustIcon from '@material-ui/icons/Adjust';
+import './style.scss';
 
 class Header extends Component {
   constructor(props) {
@@ -18,15 +18,15 @@ class Header extends Component {
   }
   handleSignOut = () => {
     // const set = new Set(localStorage.getItem("credentials"));
-    const local = localStorage.getItem("credentials");
+    const local = localStorage.getItem('credentials');
     if (local) {
-      localStorage.removeItem("credentials");
+      localStorage.removeItem('credentials');
     }
     this.props.logOut();
     // this.props.dispatch(createAction(LOG_OUT, null));
   };
   componentDidMount() {
-    window.addEventListener("scroll", () => {
+    window.addEventListener('scroll', () => {
       if (window.scrollY > 100) {
         this.setState({
           background: true,
@@ -47,21 +47,22 @@ class Header extends Component {
             {/* navbar-light bg-warning */}
             {/* bgNav navbar navMe navbar-expand-sm navbar-light  bg-info col-md-12 col-sm-12  */}
             <nav
-              className={`${!this.state.background ? "bgNav" : "bgNavGray"}`}
+              className={`${!this.state.background ? 'bgNav' : 'bgNavGray'}`}
             >
               <div
                 className={`${
                   !this.state.background
-                    ? "bgNav__content"
-                    : "bgNavGray__content"
+                    ? 'bgNav__content'
+                    : 'bgNavGray__content'
                 }`}
               >
-                <NavLink
-                  className="navbar-brand col-lg-1 col-md-2  col-sm-12 "
-                  to="/"
-                >
-                  <img className="logo" src={Logo} className={classic.logo} />
-                </NavLink>{" "}
+                {/* <NavLink className="navbar-brand col-lg-1 col-md-2" to="/">
+                  <img
+                    className="logo img-fluid"
+                    src={Logo}
+                    className={classic.logo}
+                  />
+                </NavLink> */}
                 <p
                   className={classic.header__changMode}
                   onClick={this.props.handleChangeBackGroundOS}
@@ -82,11 +83,11 @@ class Header extends Component {
                   activeStyle={{
                     // border: "1px solid black",
 
-                    border: "none",
-                    borderRadius: "5px",
-                    padding: "10px",
-                    backgroundColor: "#43c1bf",
-                    fontWeight: "bold",
+                    border: 'none',
+                    borderRadius: '5px',
+                    padding: '10px',
+                    backgroundColor: '#43c1bf',
+                    fontWeight: 'bold',
                   }}
                 >
                   Trang chủ
@@ -94,10 +95,10 @@ class Header extends Component {
                 <a
                   activeStyle={{
                     // border: "1px solid black",
-                    borderRadius: "5px",
-                    padding: "10px",
-                    backgroundColor: "#43c1bf",
-                    fontWeight: "bold",
+                    borderRadius: '5px',
+                    padding: '10px',
+                    backgroundColor: '#43c1bf',
+                    fontWeight: 'bold',
                   }}
                   href="http://todolist-dtv.surge.sh/"
                   target="_blank"
@@ -136,10 +137,10 @@ class Header extends Component {
                 {this.props.credential ? (
                   <>
                     <NavLink className="nav-link text-light" to="">
-                      Hi{" "}
+                      Hi{' '}
                       <span className="text text-uppercase text-warning">
                         {this.props.credential.hoTen}
-                      </span>{" "}
+                      </span>{' '}
                     </NavLink>
                     <NavLink
                       to=""
@@ -151,20 +152,20 @@ class Header extends Component {
                   </>
                 ) : (
                   <>
-                    {" "}
+                    {' '}
                     <NavLink
                       className="nav-link text-light"
                       to="/sign-in"
                       activeStyle={{
                         // border: "1px solid black",
-                        borderRadius: "5px",
-                        padding: "10px",
-                        backgroundColor: "#43c1bf",
-                        fontWeight: "bold",
+                        borderRadius: '5px',
+                        padding: '10px',
+                        backgroundColor: '#43c1bf',
+                        fontWeight: 'bold',
                       }}
                     >
                       Đăng nhập
-                    </NavLink>{" "}
+                    </NavLink>{' '}
                     <NavLink
                       // activeClassName=" nav-link navbar-brand"
                       className="nav-link text-light mr-2"
@@ -172,14 +173,14 @@ class Header extends Component {
                       exact={true}
                       activeStyle={{
                         // border: "1px solid black",
-                        borderRadius: "5px",
-                        padding: "10px",
-                        backgroundColor: "#43c1bf",
-                        fontWeight: "bold",
+                        borderRadius: '5px',
+                        padding: '10px',
+                        backgroundColor: '#43c1bf',
+                        fontWeight: 'bold',
                       }}
                     >
                       Đăng ký
-                    </NavLink>{" "}
+                    </NavLink>{' '}
                   </>
                 )}
               </div>
@@ -197,7 +198,7 @@ const mapDispathToProps = (dispatch) => {
   return {
     changeBG: () => {
       dispatch({
-        type: "CHANGE_BG",
+        type: 'CHANGE_BG',
       });
     },
     logOut: () => {

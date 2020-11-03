@@ -1,0 +1,16 @@
+.adminCard {
+  &__content {
+    &__box {
+      background-color: #e3eaea;
+      color: black;
+
+      font-weight: bold;
+      font-family: "Times New Roman", Times, serif;
+      border: 1px solid green;
+
+      padding: 40px;
+      box-shadow: 2px 1px 2px black;
+      border-radius: 5px;
+    }
+  }
+}

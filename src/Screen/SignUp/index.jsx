@@ -1,12 +1,12 @@
-import React, { Component } from "react";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import React, { Component } from 'react';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
 
-import { userService } from "../../Service";
-import { signUpUserSchema } from "../../Service/user";
+import { userService } from '../../Service';
+import { signUpUserSchema } from '../../Service/user';
 
-import { signUp } from "./../../Redux/Action/user";
-import { connect } from "react-redux";
-import { Link } from "react-router-dom";
+import { signUp } from './../../Redux/Action/user';
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 class SignUp extends Component {
   _handleSubmit = (values) => {
@@ -15,9 +15,9 @@ class SignUp extends Component {
   };
   render() {
     return (
-      <div className="w-50 mx-auto ">
+      <div className="w-50 mx-auto pt-5 pb-5">
         <Link to="/">
-          {" "}
+          {' '}
           <img
             className="logo__amazone"
             // src="https://pmcvariety.files.wordpress.com/2018/01/amazon-logo.jpg?w=1000"
@@ -27,13 +27,13 @@ class SignUp extends Component {
         <h3 className="mt-5 text-center text-white ">Sign up</h3>
         <Formik
           initialValues={{
-            taiKhoan: "",
-            matKhau: "",
-            email: "",
-            soDt: "",
-            maNhom: "GP01",
-            maLoaiNguoiDung: "KhachHang",
-            hoTen: "",
+            taiKhoan: '',
+            matKhau: '',
+            email: '',
+            soDt: '',
+            maNhom: 'GP01',
+            maLoaiNguoiDung: 'KhachHang',
+            hoTen: '',
           }}
           validationSchema={signUpUserSchema}
           onSubmit={this._handleSubmit}
@@ -59,7 +59,7 @@ class SignUp extends Component {
                   className="form-control"
                   name="matKhau"
                   onChange={formikProps.handleChange}
-                />{" "}
+                />{' '}
                 <ErrorMessage name="matKhau">
                   {(msg) => <div className="alert alert-danger">{msg}</div>}
                 </ErrorMessage>
@@ -71,7 +71,7 @@ class SignUp extends Component {
                   className="form-control"
                   name="hoTen"
                   onChange={formikProps.handleChange}
-                />{" "}
+                />{' '}
                 <ErrorMessage name="hoTen">
                   {(msg) => <div className="alert alert-danger">{msg}</div>}
                 </ErrorMessage>
@@ -83,7 +83,7 @@ class SignUp extends Component {
                   className="form-control"
                   name="email"
                   onChange={formikProps.handleChange}
-                />{" "}
+                />{' '}
                 <ErrorMessage name="email">
                   {(msg) => <div className="alert alert-danger">{msg}</div>}
                 </ErrorMessage>
@@ -95,7 +95,7 @@ class SignUp extends Component {
                   className="form-control"
                   name="soDt"
                   onChange={formikProps.handleChange}
-                />{" "}
+                />{' '}
                 <ErrorMessage name="soDt">
                   {(msg) => <div className="alert alert-danger">{msg}</div>}
                 </ErrorMessage>

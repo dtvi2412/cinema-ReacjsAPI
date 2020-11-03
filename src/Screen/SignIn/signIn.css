@@ -1,8 +1,13 @@
+.dangKy{
+    background-color: rgba(1, 0, 1, 1);
+    padding: 150px 0;
+}
 .signIn {
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: white;
+    padding:40px
 }
 .signIn__text {
     font-size: 30px !important;

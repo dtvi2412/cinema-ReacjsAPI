@@ -33,6 +33,7 @@
 }
 .ngayKhoiChieu {
   color: white;
+  font-size: 0.8rem;
 }
 .con {
   position: absolute;
@@ -45,17 +46,17 @@
   bottom: 25%;
 }
 .con span {
-  padding: 10px 15px;
+  padding: 5px 5px;
   color: white;
   border-radius: 20px;
   text-align: center;
   background-color: #f1b722;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 0.9rem;
 }
-.con h1 {
+.con .tenPhim {
   color: white;
-  font-size: 30px;
+  font-size: 1rem;
 }
 .con button {
   background: rgb(0, 0, 0, 0.5);

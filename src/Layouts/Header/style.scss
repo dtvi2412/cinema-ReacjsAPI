@@ -1,43 +1,51 @@
 .colMe > .navMe {
-    background: red !important;
+  background: red !important;
 }
 .colMe {
-    background: red !important;
+  background: red !important;
 }
 .bgNavGray {
-    background-color: #19102a;
+  background-color: #19102a;
 
-    color: white;
-    position: fixed;
-    padding: 15px 0;
-    z-index: 9999;
-    font-weight: bold;
-    font-size: 18px;
+  color: white;
+  position: fixed;
+  padding: 15px 0;
+  //   z-index: 9998;
+  z-index: 99999;
+  font-weight: bold;
+  font-size: 18px;
 
-    &__content {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
+  &__content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
 }
 .bgNav {
-    background-color: black;
+  background-color: black;
 
-    color: white;
-    position: fixed;
-    padding: 15px 0;
-    z-index: 9999;
-    font-weight: bold;
-    font-size: 18px;
+  color: white;
+  position: fixed;
+  padding: 15px 0;
+  //   z-index: 9999;
+  z-index: 99999;
+  font-weight: bold;
+  font-size: 18px;
 
-    &__content {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
+  &__content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+nav{
+  position: fixed;
+  right:0;
+  left:0;
+  top:0;
 }
 @media only screen and (max-width: 650px) {
-    .bgNav {
-        font-size: 14px;
-    }
+  .bgNav {
+    font-size: 14px;
+  }
 }

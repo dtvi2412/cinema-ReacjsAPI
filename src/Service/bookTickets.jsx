@@ -1,9 +1,9 @@
-import Axios from "axios";
+import Axios from 'axios';
 class BookTicketsService {
   fetchBookTickets(id) {
     return Axios({
-      method: "GET",
-      url: `http://movie0706.cybersoft.edu.vn/api/QuanLyDatVe/LayDanhSachPhongVe?MaLichChieu=${id}`,
+      method: 'GET',
+      url: `https://movie0706.cybersoft.edu.vn/api/QuanLyDatVe/LayDanhSachPhongVe?MaLichChieu=${id}`,
     });
   }
 }

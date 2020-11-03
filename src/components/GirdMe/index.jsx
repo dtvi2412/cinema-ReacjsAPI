@@ -24,7 +24,7 @@ class GirdMe extends Component {
             <div className="con">
               {" "}
               <span>{item1.danhGia}</span>
-              <h1>{item1.tenPhim}</h1>
+              <h4 className="tenPhim">{item1.tenPhim}</h4>
               <h5 className="ngayKhoiChieu">
                 Ngày khởi chiếu:{" "}
                 {new Date(item1.ngayKhoiChieu).toLocaleDateString()}

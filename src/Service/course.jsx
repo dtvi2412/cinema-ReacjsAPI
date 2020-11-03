@@ -1,23 +1,23 @@
-import Axios from "axios";
+import Axios from 'axios';
 class CourseService {
   fetchCourse() {
     return Axios({
-      type: "GET",
+      type: 'GET',
       url:
-        "http://movie0706.cybersoft.edu.vn/api/QuanLyPhim/LayDanhSachPhim?maNhom=GP05",
+        'https://movie0706.cybersoft.edu.vn/api/QuanLyPhim/LayDanhSachPhim?maNhom=GP05',
     });
   }
   fetchCourseDetail(id) {
     return Axios({
-      method: "GET",
-      url: `http://movie0706.cybersoft.edu.vn/api/QuanLyPhim/LayThongTinPhim?MaPhim=${id}`,
+      method: 'GET',
+      url: `https://movie0706.cybersoft.edu.vn/api/QuanLyPhim/LayThongTinPhim?MaPhim=${id}`,
     });
   }
   addCourse(data) {
-    const userAdmin = JSON.parse(localStorage.getItem("credentials"));
+    const userAdmin = JSON.parse(localStorage.getItem('credentials'));
     return Axios({
-      method: "POST",
-      url: `http://movie0706.cybersoft.edu.vn/api/QuanLyPhim/ThemPhim`,
+      method: 'POST',
+      url: `https://movie0706.cybersoft.edu.vn/api/QuanLyPhim/ThemPhim`,
 
       data,
       headers: {
@@ -27,10 +27,10 @@ class CourseService {
     });
   }
   deleteCourseItem(id) {
-    const userAdmin = JSON.parse(localStorage.getItem("credentials"));
+    const userAdmin = JSON.parse(localStorage.getItem('credentials'));
     return Axios({
-      method: "DELETE",
-      url: `http://movie0706.cybersoft.edu.vn/api/QuanLyPhim/XoaPhim?MaPhim=${id}`,
+      method: 'DELETE',
+      url: `https://movie0706.cybersoft.edu.vn/api/QuanLyPhim/XoaPhim?MaPhim=${id}`,
       headers: {
         Authorization: `Bearer ${userAdmin.accessToken}`,
       },

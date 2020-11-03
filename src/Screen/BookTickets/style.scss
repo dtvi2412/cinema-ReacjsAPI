@@ -1,71 +1,180 @@
 .bookTickets {
-    background-color: rgba(0, 0, 0, 0.4);
-    padding-top: 150px;
-    &__content {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 150px 0;
+  &__content {
+    display: flex;
+    // justify-content: space-around;
+    align-items: flex-start;
+    &__info {
+      color: white;
+      background: rgb(2, 0, 36);
+      // border-radius: 5px;
+
+      padding: 50px 40px;
+      text-align: center;
+      // margin: 0 auto;
+      max-width: 300px;
+      min-width: 200px;
+      
+      // margin-top: 45px;
+      // margin-right: 15px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+      position: fixed;
+      right:0;
+      top:0;
+      z-index: 99999;
+      max-height: 100%;
+  
+      box-shadow: 2px 2px 4px 5px white;
+      background: linear-gradient(
+        169deg,
+        rgba(2, 0, 36, 0.4) 0%,
+        rgba(71, 64, 74, 0.8662815467984069) 71%,
+        rgba(0, 212, 255, 0.3) 100%
+      );
+      background-color: wheat;
+      form{
+        input{
+          margin:2px 0;
+          padding:2px 3px;
+          border:none;
+          border-top: 1px solid gray;
+          // background-color: transparent;
+        }
+      }
+      .ghe{
+        margin:5px 1px;
         display: flex;
-        justify-content: space-around;
-        align-items: flex-start;
-        &__info {
-            color: white;
-            background: rgb(2, 0, 36);
-            border-radius: 5px;
-            background: linear-gradient(
-                169deg,
-                rgba(2, 0, 36, 0.4) 0%,
-                rgba(71, 64, 74, 0.8662815467984069) 71%,
-                rgba(0, 212, 255, 0.3) 100%
-            );
-            padding: 20px 10px;
-            text-align: center;
-            margin: 0 auto;
-            max-width: 30%;
-            margin-top: 45px;
-            margin-right: 15px;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            h1 {
-                font-weight: bold;
-                font-size: 35px;
-            }
-            &__img {
-                width: 100%;
-                height: 300px;
-                object-fit: contain;
-            }
+        flex-wrap: wrap;
+        &__name{
+          // padding-right: 5px;
+          margin-right: 5px;
         }
-        &__table {
-            width: 70%;
-            padding: 40px;
-
-            button {
-                span {
-                    text-align: center;
-                    line-height: -130px;
-                }
-                padding: 40px;
-                margin: 10px;
-                width: 40px;
-                height: 40px;
-                text-align: center;
-
-                border: 1px solid black;
-                color: white;
-                font-weight: 300;
-                border-radius: 12px;
-                border: none;
-                & + .chuaDat {
-                    background: rgba(0, 0, 0, 0.4);
-                    &:focus {
-                        outline: none;
-                    }
-                }
-                & + .daDat {
-                    background: orangered;
-                    // pointer-events: none;
-                    &:focus {
-                        outline: none;
-                    }
-                }
-            }
+      }
+      h1 {
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
+      &__img {
+        width: 100%;
+        height: 15vh;
+        object-fit: contain;
+      }
+      .datVe{
+        border:none;
+        padding:10px 20px;
+        background:black;
+        color:white;
+        margin:10px 0;
+        &:hover{
+          background-color: rgba(0, 0, 0, 0.4);
         }
+      }
+      span{
+        font-size:0.9rem;
+        color:black;
+      }
     }
+    &__table {
+      width: 60%;
+      //   padding: 40px;
+
+      button {
+        span {
+          text-align: center;
+          line-height: 20px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+        position: relative;
+        padding: 20px;
+        margin: 10px;
+
+        width: 20px;
+
+        text-align: center;
+
+        border: 1px solid black;
+        color: white;
+        font-weight: 800;
+        border-radius: 12px;
+        border: none;
+        & + .chuaDat {
+          background: rgba(0, 0, 0, 0.4);
+          &:focus {
+            outline: none;
+          }
+        }
+        // & + .daDat {
+        //   background: gray;
+        //   //   pointer-events: none;
+        //   &:focus {
+        //     outline: none;
+        //   }
+        // }
+        & + .dangChon {
+          background-color: orangered;
+        }
+        & + .huyChon {
+          background: rgba(0, 0, 0, 0.4);
+          // background-color: rebeccapurple;
+        }
+        & + .daDat {
+          background: gray;
+          //   pointer-events: none;
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+      .Tittle {
+        display: flex;
+        color: white;
+        font-weight: 700;
+        margin: 10px;
+        position: relative;
+        &__daDat {
+          margin-right: 10px;
+          &::before {
+            content: "";
+            width: 20px;
+            height: 20px;
+            background-color: gray;
+            position: absolute;
+            top: -20px;
+          }
+        }
+        &__dangChon {
+          margin-right: 10px;
+          &::before {
+            content: "";
+            width: 20px;
+            height: 20px;
+            background-color: orangered;
+            position: absolute;
+            top: -20px;
+          }
+        }
+        .dangChon {
+          background-color: orangered;
+        }
+        .huyChon {
+          background: rgba(0, 0, 0, 0.4);
+          // background-color: rebeccapurple;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width:1100px){
+  .bookTickets{
+    &__content{
+      &__info{
+       
+      }
+    }
+  }
 }
