@@ -46,11 +46,9 @@ export default class Card extends Component {
                 </span>{" "} */}
               </h3>
               <p className="detail__film__info">
-                {' '}
-                {/* {courseDetail.moTa.substr(0, [20])}... */}
                 {courseDetail.moTa.substr(0, [this.state.gioiHan])}
                 {this.state.baCham}
-              </p>{' '}
+              </p>
               {this.state.anNut ? (
                 <button
                   className="detail__film__info__more"
@@ -63,8 +61,7 @@ export default class Card extends Component {
               ) : (
                 <></>
               )}
-              {/* <span className="detail__film__trailer">Trailer</span> */}
-            </div>{' '}
+            </div>
           </>
         )}
       </div>

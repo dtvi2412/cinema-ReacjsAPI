@@ -55,23 +55,30 @@ class CourseItems extends Component {
                 >
                   <FaCentercode style={{ fontSize: '40px' }} />
                 </Button>
-                <Modal isOpen={this.state.isOpenModel}>
-                  <ModalHeader toggle={this.toggleModel.bind(this)}>
-                    Header
+                <Modal
+                  style={{ marginTop: '150px', maxWidth: '1200px' }}
+                  isOpen={this.state.isOpenModel}
+                >
+                  <ModalHeader
+                    style={{ marginLeft: '50px' }}
+                    toggle={this.toggleModel.bind(this)}
+                  >
+                    Trailer Right Here Bro!!
                   </ModalHeader>
                   <ModalBody>
                     {' '}
                     <iframe
-                      className="p-5 bg-dark"
+                      className="p-5 bg-white"
                       width="100%"
                       height="100%"
+                      height="500px"
                       src={courseItem.trailer}
                       frameborder="0"
                       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                       allowfullscreen
                     ></iframe>
                   </ModalBody>
-                  <ModalFooter>FOOTER</ModalFooter>
+                  {/* <ModalFooter>FOOTER</ModalFooter> */}
                 </Modal>
                 {/* modal */}
               </span>

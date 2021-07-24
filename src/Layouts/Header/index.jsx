@@ -56,14 +56,8 @@ class Header extends Component {
                     : 'bgNavGray__content'
                 }`}
               >
-                {/* <NavLink className="navbar-brand col-lg-1 col-md-2" to="/">
-                  <img
-                    className="logo img-fluid"
-                    src={Logo}
-                    className={classic.logo}
-                  />
-                </NavLink> */}
-                <p
+                {/* Close Change Background  */}
+                {/* <p
                   className={classic.header__changMode}
                   onClick={this.props.handleChangeBackGroundOS}
                 >
@@ -74,7 +68,7 @@ class Header extends Component {
                   onClick={this.props.changeBG}
                 >
                   <AdjustIcon />
-                </p>
+                </p> */}
                 <NavLink
                   // activeClassName=" nav-link navbar-brand"
                   className="navbar-brand text-light"
@@ -92,7 +86,13 @@ class Header extends Component {
                 >
                   Trang chủ
                 </NavLink>
-                <a
+                <NavLink className="navbar-brand text-light" to="/">
+                  Tin Tức
+                </NavLink>
+                <NavLink className="navbar-brand text-light" to="/">
+                  Ứng Dụng
+                </NavLink>
+                {/* <a
                   activeStyle={{
                     // border: "1px solid black",
                     borderRadius: '5px',
@@ -106,7 +106,7 @@ class Header extends Component {
                   className="nav-link text-light"
                 >
                   Todo app
-                </a>
+                </a> */}
                 {/* <NavLink
                   activeStyle={{
                     // border: "1px solid black",
